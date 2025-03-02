@@ -1,3 +1,9 @@
+//File      : MMahasiwa.java
+//Nama      : JUAN DITO SIREGAR
+//NIM       : 24060123120037
+//Tanggal   : 30/11/2025
+
+
 public class MMahasiswa {
     public static void main(String[] args) {
         Dosen dosen1 = new Dosen("D001", "Dr. Rahmat", "Informatika");

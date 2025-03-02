@@ -1,3 +1,9 @@
+//File      : MataKuliah.java
+//Nama      : JUAN DITO SIREGAR
+//NIM       : 24060123120037
+//Tanggal   : 30/11/2025
+
+
 class MataKuliah {
     private String idMatKul;
     private String nama;

@@ -1,3 +1,9 @@
+//File      : Mahasiswa.java
+//Nama      : JUAN DITO SIREGAR
+//NIM       : 24060123120037
+//Tanggal   : 30/11/2025
+
+
 class Mahasiswa {
     private String nim;
     private String nama;
