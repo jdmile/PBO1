@@ -1,0 +1,40 @@
+@startuml
+class Pegawai {
+    - String NIP
+    - String nama
+    - LocalDate tanggalLahir
+    - LocalDate TMT
+    - double gajiPokok
+    + int hitungMasaKerja()
+    + abstract void printInfo()
+}
+
+abstract class Dosen {
+    - String fakultas
+}
+
+class DosenTetap {
+    - String NIDN
+    - final int BUP = 65
+    + double hitungTunjangan()
+    + LocalDate hitungBUP()
+}
+
+class DosenTamu {
+    - String NIDK
+    - LocalDate kontrakBerakhir
+    + double hitungTunjangan()
+}
+
+class Tendik {
+    - String bidang
+    - final int BUP = 55
+    + double hitungTunjangan()
+    + LocalDate hitungBUP()
+}
+
+Pegawai <|-- Dosen
+Dosen <|-- DosenTetap
+Dosen <|-- DosenTamu
+Pegawai <|-- Tendik
+@enduml
