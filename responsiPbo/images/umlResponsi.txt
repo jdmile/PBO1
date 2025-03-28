@@ -1,0 +1,48 @@
+@startuml
+class Fakultas {
+    - nama: String
+    - tarifUKT: double
+    - gajiPokok: double
+    + getNama(): String
+    + getTarifUKT(): double
+    + getGajiPokok(): double
+}
+
+class CivitasAkademika {
+    - nama: String
+    - email: String
+    + tampilkanInfo(): void
+}
+
+class Mahasiswa {
+    - NIM: String
+    - semester: int
+    - fakultas: Fakultas
+    + hitungUKT(): double
+    + tampilkanInfo(): void
+}
+
+class Karyawan {
+    - NIP: String
+    - masaKerja: int
+    + tampilkanInfo(): void
+}
+
+class Dosen {
+    - fakultas: Fakultas
+    + hitungGaji(): double
+    + tampilkanInfo(): void
+}
+
+class Tendik {
+    + hitungGaji(): double
+    + tampilkanInfo(): void
+}
+
+CivitasAkademika <|-- Mahasiswa
+CivitasAkademika <|-- Karyawan
+Karyawan <|-- Dosen
+Karyawan <|-- Tendik
+Fakultas "1" -- "N" Mahasiswa : memiliki >
+Fakultas "1" -- "N" Dosen : memiliki >
+@enduml
